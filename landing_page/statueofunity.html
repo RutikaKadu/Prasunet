@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statue of Unity, Vadodara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN4GCuQPmcjYftHlMZdQybKM7nl0rtyzodUg&s') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Media Queries for Adjusting Layout */
+    @media (max-width: 767px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Hotel Styles */
+    .hotels {
+        margin-bottom: 40px;
+    }
+
+    .hotel-card {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hotel-card img {
+        width: 150px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hotel-info {
+        padding: 10px;
+    }
+
+    .hotel-info h3 {
+        margin-top: 0;
+    }
+
+    .hotel-info p {
+        margin: 5px 0 10px;
+    }
+
+    .hotel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .hotel-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Attraction Styles */
+    .about-attraction,
+    .nearby-attractions,
+    .reviews {
+        margin-bottom: 40px;
+    }
+
+    /* Nearby Attractions Styles */
+    .nearby-attractions .attraction-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .nearby-attractions .attraction-card h3 {
+        margin-top: 0;
+    }
+
+    .nearby-attractions .attraction-card a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .nearby-attractions .attraction-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Reviews Styles */
+    .reviews .review {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 2s ease-in-out;
+    }
+
+    .reviews .review span {
+        display: block;
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Statue of Unity, Vadodara</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About the Statue of Unity</h2>
+            <p>The Statue of Unity is a colossal statue of Indian statesman and independence activist Sardar Vallabhbhai Patel, located in the state of Gujarat, India. Standing at 182 meters (597 feet), it is the world's tallest statue. The statue is located on the Narmada River in the Kevadiya colony and is a major tourist attraction.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/statue_of_unity.jpeg" alt="Statue of Unity">
+                <img src="https://www.financialexpress.com/wp-content/uploads/2018/12/cats660-49.jpg" alt="Statue of Unity at Night">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/74/c6/ba/caption.jpg?w=1200&h=-1&s=1" alt="Statue of Unity Close-up">
+                <img src="https://imgcld.yatra.com/ytimages/image/upload/t_monuments_detailslargeimg/v1542780632/Monuments/be1f0795-8b67-41f9-887d-4ab9ba1711a8/StatueofUnityNarmad_1542284708_sbqdgL.jpg" alt="Statue of Unity Side View">
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near the Statue of Unity</h2>
+            <div class="hotel-card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/e0/b8/09/exterior.jpg?w=700&h=-1&s=1" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Ramada Encore, Vadodara</h3>
+                    <p>A modern hotel offering excellent amenities and located close to the Statue of Unity.</p>
+                    <a href="https://www.ramadaencoresou.com/?CID=LC:wmcic5n98gs1g0r:54785&iata=00093796" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/fd/83/4d/hotel-porch-area.jpg?w=700&h=-1&s=1" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>The Fern, Sardar Sarovar Resort</h3>
+                    <p>A luxurious resort known for its top-notch service and beautiful surroundings.</p>
+                    <a href="https://www.fernhotels.com/the-fern-sardar-sarovar-resort-kevadia-gujrat" target="_blank">View More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>Sardar Sarovar Dam</h3>
+                <p>A gravity dam on the Narmada river, providing stunning views and an insight into India's engineering prowess.</p>
+                <a href="https://en.wikipedia.org/wiki/Sardar_Sarovar_Dam" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Valley of Flowers</h3>
+                <p>A beautifully landscaped area near the Statue of Unity, featuring numerous flowerbeds and walking paths.</p>
+                <a href="https://statueofunity.in/valley-of-flowers/" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Shoolpaneshwar Wildlife Sanctuary</h3>
+                <p>A wildlife sanctuary offering a glimpse of the local flora and fauna, perfect for nature enthusiasts.</p>
+                <a href="https://en.wikipedia.org/wiki/Shoolpaneshwar_Wildlife_Sanctuary" target="_blank">Learn More</a>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"The Statue of Unity is an awe-inspiring monument. The scale and the craftsmanship are truly remarkable."</p>
+                <span>- A Visitor</span>
+            </div>
+            <div class="review">
+                <p>"Visiting the Statue of Unity was a fantastic experience. The surroundings are beautifully maintained."</p>
+                <span>- A Tourist</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

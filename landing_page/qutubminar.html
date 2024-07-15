@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qutb Minar, Delhi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBR39iRM9VjGOihVDmPjmavYHshXag5O1OiQ&s') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Media Queries for Adjusting Layout */
+    @media (max-width: 767px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Hotel Styles */
+    .hotels {
+        margin-bottom: 40px;
+    }
+
+    .hotel-card {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hotel-card img {
+        width: 150px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hotel-info {
+        padding: 10px;
+    }
+
+    .hotel-info h3 {
+        margin-top: 0;
+    }
+
+    .hotel-info p {
+        margin: 5px 0 10px;
+    }
+
+    .hotel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .hotel-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Attraction Styles */
+    .about-attraction,
+    .nearby-attractions,
+    .reviews {
+        margin-bottom: 40px;
+    }
+
+    /* Nearby Attractions Styles */
+    .nearby-attractions .attraction-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .nearby-attractions .attraction-card h3 {
+        margin-top: 0;
+    }
+
+    .nearby-attractions .attraction-card a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .nearby-attractions .attraction-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Reviews Styles */
+    .reviews .review {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 2s ease-in-out;
+    }
+
+    .reviews .review span {
+        display: block;
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Qutb Minar, Delhi</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About Qutb Minar</h2>
+            <p>The Qutb Minar is a UNESCO World Heritage Site located in Delhi, India. It is a 73-meter tall tapering tower of five storeys, with a 14.3-meter base diameter, reducing to 2.7 meters at the top. The construction of the Qutb Minar was started by Qutb-ud-din Aibak in 1193 and completed by his successor, Iltutmish, in 1220. It is one of the finest examples of Indo-Islamic architecture.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://thrillingtravel.in/wp-content/uploads/2019/10/Delhi-Qutub-Minar-1024x683.jpg" alt="Qutb Minar">
+                <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/panorama-qutub-minar-new-delhi-india-harsh-vardhan.jpg" alt="Qutb Minar Panorama">
+                <img src="https://static.india.com/wp-content/uploads/2018/08/Qutub-Minar-1.jpg?impolicy=Medium_Resize&w=1200&h=800" alt="Qutb Complex">
+                <img src="https://res.cloudinary.com/purnesh/image/upload/f_auto/v1480673877/alali-darwaza.jpg" alt="Qutb Minar and Alai Darwaza">
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near Qutb Minar</h2>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpfuyAklGtVDbOEPfj6WEX9rBO0kICmxevYw&s" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Qutub Residency</h3>
+                    <p>Comfortable and conveniently located hotel with modern amenities.</p>
+                    <a href="https://www.makemytrip.com/hotels/qutub_residency-details-delhi.html" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYwyplwqw2mQmgVA579qerl5-vpA2r3lXew&s" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Hotel City Park</h3>
+                    <p>Well-rated hotel with excellent service and facilities.</p>
+                    <a href="https://cityparkhotel.in/" target="_blank">View More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>Iron Pillar of Delhi</h3>
+                <p>A remarkable iron pillar dating back to the 4th century, known for its rust-resistant composition.</p>
+                <a href="https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Alai Darwaza</h3>
+                <p>The southern gateway of the Quwwat-ul-Islam Mosque, known for its Indo-Islamic architecture.</p>
+                <a href="https://en.wikipedia.org/wiki/Alai_Darwaza" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Quwwat-ul-Islam Mosque</h3>
+                <p>The earliest extant mosque in India, built by Qutb-ud-din Aibak in 1193.</p>
+                <a href="https://en.wikipedia.org/wiki/Quwwat-ul-Islam_Mosque" target="_blank">Learn More</a>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"The Qutb Minar is an architectural marvel. The intricate carvings and the history behind it are fascinating."</p>
+                <span>- A Visitor</span>
+            </div>
+            <div class="review">
+                <p>"Visiting the Qutb Minar complex was a memorable experience. The site is well-maintained and offers great insights into India's history."</p>
+                <span>- A Tourist</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

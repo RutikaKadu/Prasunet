@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Drive, Mumbai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+   
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://preview.redd.it/bvq129dnfbp31.jpg?width=1080&crop=smart&auto=webp&s=0c329ca421d4ab02b2970745e11ed4170785480f') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Gallery Styles */
+.gallery {
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images cover the set dimensions */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 767px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: auto; 
+    }
+}
+
+.hotels {
+    margin-bottom: 40px;
+}
+
+.hotel-card {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hotel-card img {
+    width: 150px;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.hotel-info {
+    padding: 10px;
+}
+
+.hotel-info h3 {
+    margin-top: 0;
+}
+
+.hotel-info p {
+    margin: 5px 0 10px;
+}
+
+.hotel-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.hotel-info a:hover {
+    text-decoration: underline;
+}
+
+
+.about-marine-drive,
+.nearby-attractions,
+.reviews {
+    margin-bottom: 40px;
+}
+
+.nearby-attractions .attraction-card {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.nearby-attractions .attraction-card h3 {
+    margin-top: 0;
+}
+
+.nearby-attractions .attraction-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nearby-attractions .attraction-card a:hover {
+    text-decoration: underline;
+}
+
+.reviews .review {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.reviews .review span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Marine Drive, Mumbai</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-marine-drive">
+            <h2>About Marine Drive</h2>
+            <p>Marine Drive is a 3.6-kilometer-long boulevard in South Mumbai. It is also known as the Queen's Necklace because of the street lights that make the road resemble a string of pearls in a necklace when viewed from an elevated point. Marine Drive is one of the most popular places in Mumbai, offering stunning views of the Arabian Sea, especially at sunset.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLMz9utzQcLy1IZ40XaJUCrAZJ0aMfR-ru3Q&s" alt="Marine Drive">
+                <img src="https://media.istockphoto.com/id/1010105188/photo/cuff-parade-south-mumbai-at-night.jpg?s=612x612&w=0&k=20&c=NLK7O3UX5PmsayDFSpvSBI3yKYuH8JbgV8YOnEOjQDY=" alt="Marine Drive at night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3Lvx3JIqlCmOYMFpZhrG7WLp6oqRCiuN_A&s" alt="Sunset at Marine Drive">
+                <img src="https://www.tripsavvy.com/thmb/soWUDapWGtmRQbvvY5OFMdd8Ezs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1008831236-5c65d6bf4cedfd00014aa310.jpg" alt="View from Marine Drive">
+                
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near Marine Drive</h2>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SH4-q4zmdSzCovotiu65cn_urkkDvmSq8A&s" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Hotel Lords Mumbai</h3>
+                    <p>Very nice and well situated Good price for an hotel service Only thing, they didn’t clean the room during ou stat.</p>
+                    <a href="https://www.agoda.com/hotel-lords-fort/hotel/mumbai-in.html?ds=LDfgdwZWIDkJrsau" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/59516178.jpg?k=493d3d6140fd42c09f66b444fe53139e50ba7d628918bc53fecb5b7f700928c8&o=&hp=1" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Marine Plaza</h3>
+                    <p>Comfortable stay with modern amenities.</p>
+                    <a href="https://www.hotelmarineplaza.com/" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Oberoi-Hotel.jpg" alt="Hotel 3">
+                <div class="hotel-info">
+                    <h3>The Oberoi</h3>
+                    <p>Five-star hotel offering luxury and convenience.</p>
+                    <a href="https://www.oberoihotels.com/hotels-in-mumbai/?utm_source=GMBlisting&utm_medium=organic" target="_blank">View More</a>
+                </div>
+            </div>
+            
+        </section>
+
+        
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>Gateway of India</h3>
+                <p>An iconic arch-monument built in the early 20th century in the city of Mumbai.</p>
+                <a href="https://en.wikipedia.org/wiki/Gateway_of_India" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Colaba Causeway</h3>
+                <p>A bustling shopping street with an array of shops and eateries.</p>
+                <a href="https://en.wikipedia.org/wiki/Colaba_Causeway" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Chhatrapati Shivaji Maharaj Vastu Sangrahalaya</h3>
+                <p>A premier museum showcasing artifacts from India's history.</p>
+                <a href="https://en.wikipedia.org/wiki/Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya" target="_blank">Learn More</a>
+            </div>
+            
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"Marine Drive is a beautiful place to unwind and enjoy the sunset. The view is breathtaking!"</p>
+                <span>- A Traveler</span>
+            </div>
+            <div class="review">
+                <p>"I love walking along Marine Drive in the evening. It's always lively and has a great vibe."</p>
+                <span>- Local Resident</span>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Landing Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

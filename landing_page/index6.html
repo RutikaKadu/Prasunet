@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawa Mahal, Jaipur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://miro.medium.com/v2/resize:fit:603/1*fYA-b-KA9UUqPL2OsDYkQw.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Media Queries for Adjusting Layout */
+    @media (max-width: 767px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Hotel Styles */
+    .hotels {
+        margin-bottom: 40px;
+    }
+
+    .hotel-card {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hotel-card img {
+        width: 150px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hotel-info {
+        padding: 10px;
+    }
+
+    .hotel-info h3 {
+        margin-top: 0;
+    }
+
+    .hotel-info p {
+        margin: 5px 0 10px;
+    }
+
+    .hotel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .hotel-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Attraction Styles */
+    .about-attraction,
+    .nearby-attractions,
+    .reviews {
+        margin-bottom: 40px;
+    }
+
+    /* Nearby Attractions Styles */
+    .nearby-attractions .attraction-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .nearby-attractions .attraction-card h3 {
+        margin-top: 0;
+    }
+
+    .nearby-attractions .attraction-card a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .nearby-attractions .attraction-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Reviews Styles */
+    .reviews .review {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 2s ease-in-out;
+    }
+
+    .reviews .review span {
+        display: block;
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Hawa Mahal, Jaipur</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About Hawa Mahal</h2>
+            <p>The Hawa Mahal, also known as the "Palace of Winds," is a stunning pink sandstone palace located in Jaipur, India. Built in 1799 by Maharaja Sawai Pratap Singh, the palace is renowned for its unique five-story exterior with 953 small windows called 'jharokhas' that allow the cool air to pass through, providing a natural air conditioning effect. The palace was designed to enable the royal women to observe street festivals while remaining unseen from the outside.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDD8CIjBDuVukV24jBDSDnW6-DUu3qrzpeQ&s" alt="Hawa Mahal">
+                <img src="https://i.pinimg.com/originals/b5/56/b9/b556b9508799173c89ef9ed7e7457a7f.jpg" alt="Hawa Mahal Close-up">
+                <img src="https://previews.123rf.com/images/donyanedomam/donyanedomam1602/donyanedomam160200399/55338092-interior-of-hawa-mahal-palace-of-the-winds-in-jaipur-rajasthan-india-it-was-designed-by-lal-chand.jpg" alt="Hawa Mahal Interior">
+                <img src="https://www.thegrandindianroute.com/wp-content/uploads/2024/03/Untitled-design-12.jpg" alt="Hawa Mahal at Night">
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near Hawa Mahal</h2>
+            <div class="hotel-card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/ea/ad/0e/hotel-om-tower.jpg" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Hotel Om Tower</h3>
+                    <p>Comfortable hotel with great views and amenities.</p>
+                    <a href="http://www.hotelomtower.com/" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://media.iceportal.com/25833/photos/8920478_XL.jpg" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Golden Tulip Jaipur</h3>
+                    <p>Upscale hotel offering luxurious accommodations and facilities.</p>
+                    <a href="https://jaipur.goldentulip.com/en-us/" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/05/ef/fa/62/pearl-palace-heritage.jpg" alt="Hotel 3">
+                <div class="hotel-info">
+                    <h3>Hotel Pearl Palace</h3>
+                    <p>Charming hotel with unique decor and excellent service.</p>
+                    <a href="http://hotelpearlpalace.com/" target="_blank">View More</a>
+                </div>
+            </div>
+            <!-- Add more hotels as needed -->
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>City Palace</h3>
+                <p>A beautiful palace complex that was the seat of the Maharaja of Jaipur.</p>
+                <a href="https://en.wikipedia.org/wiki/City_Palace,_Jaipur" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Jantar Mantar</h3>
+                <p>A collection of architectural astronomical instruments built by Sawai Jai Singh II.</p>
+                <a href="https://en.wikipedia.org/wiki/Jantar_Mantar,_Jaipur" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Amber Fort</h3>
+                <p>A magnificent fort located on a hilltop, known for its artistic style and historic significance.</p>
+                <a href="https://en.wikipedia.org/wiki/Amer_Fort" target="_blank">Learn More</a>
+            </div>
+            <!-- Add more attractions as needed -->
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"Hawa Mahal is an architectural marvel with a rich history. The intricate lattice work on the windows is simply mesmerizing."</p>
+                <span>- A History Lover</span>
+            </div>
+            <div class="review">
+                <p>"The view from the top of Hawa Mahal is breathtaking. A must-visit landmark in Jaipur."</p>
+                <span>- A Visitor</span>
+            </div>
+            <!-- Add more reviews as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

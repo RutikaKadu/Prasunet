@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Fort, Delhi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://holidayhouseboys.com/wp-content/uploads/2022/04/278.-The-Red-Fort-Near-Agra-India.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Media Queries for Adjusting Layout */
+    @media (max-width: 767px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Hotel Styles */
+    .hotels {
+        margin-bottom: 40px;
+    }
+
+    .hotel-card {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hotel-card img {
+        width: 150px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hotel-info {
+        padding: 10px;
+    }
+
+    .hotel-info h3 {
+        margin-top: 0;
+    }
+
+    .hotel-info p {
+        margin: 5px 0 10px;
+    }
+
+    .hotel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .hotel-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Attraction Styles */
+    .about-attraction,
+    .nearby-attractions,
+    .reviews {
+        margin-bottom: 40px;
+    }
+
+    /* Nearby Attractions Styles */
+    .nearby-attractions .attraction-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .nearby-attractions .attraction-card h3 {
+        margin-top: 0;
+    }
+
+    .nearby-attractions .attraction-card a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .nearby-attractions .attraction-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Reviews Styles */
+    .reviews .review {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 2s ease-in-out;
+    }
+
+    .reviews .review span {
+        display: block;
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Red Fort, Delhi</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About Red Fort</h2>
+            <p>The Red Fort, located in the heart of Delhi, India, is a historic fortification that served as the main residence of the Mughal Emperors. Built by Emperor Shah Jahan in 1639, it is renowned for its massive enclosing walls of red sandstone and its intricate Mughal architecture, which includes a mix of Persian, Timurid, and Indian styles.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://images.saymedia-content.com/.image/t_share/MjAzNDMwNzE1ODA1NjcyNzk2/fort-agra-easy-peasy.jpg" alt="Red Fort">
+                <img src="https://assets-news.housing.com/news/wp-content/uploads/2020/11/16140424/Know-more-about-the-Agra-Fort-valued-at-possibly-over-Rs-4100-crores-shutterstock_463339355.jpg" alt="Red Fort Inside View">
+                <img src="https://www.tutorialspoint.com/red_fort/images/lahori_gate.jpg" alt="Lahori Gate">
+                <img src="https://i.pinimg.com/originals/9c/c0/67/9cc067ab6810af3c5d5bbc6862d1fdb5.jpg" alt="Red Fort at Dusk">
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near Red Fort</h2>
+            <div class="hotel-card">
+                <img src="https://r1imghtlak.ibcdn.com/2be0ed9272b511e5b69f0022195573b9.jfif?downsize=634:357" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Hotel Maharaja Continental</h3>
+                    <p>Comfortable and conveniently located hotel with modern amenities.</p>
+                    <a href="https://www.goibibo.com/hotels/maharaja-continental-hotel-in-delhi-8567622430965110099/" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaBM_KQch8zIatkXffPYxzonUJsumNk6knSUT2RuMF9CVVwfwWszSL9EPvF7yhYxSq9Lo&usqp=CAU" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Hotel City Star</h3>
+                    <p>Well-rated hotel with excellent service and facilities.</p>
+                    <a href="https://www.makemytrip.com/hotels/hotel_city_star_agra-details-agra.html" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/237643546.jpg?k=d45c95688a1d0b3ed99afc25b938d6bcf50291841e97dc380a3919c7859d3780&o=&hp=1" alt="Hotel 3">
+                <div class="hotel-info">
+                    <h3>The Park New Delhi</h3>
+                    <p>Luxurious hotel with top-notch amenities and a great location.</p>
+                    <a href="https://www.theparkhotels.com/new-delhi/" target="_blank">View More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>Jama Masjid</h3>
+                <p>One of the largest mosques in India, built by Shah Jahan in 1656.</p>
+                <a href="https://en.wikipedia.org/wiki/Jama_Masjid,_Delhi" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Chandni Chowk</h3>
+                <p>A historic market known for its bustling streets and diverse shops.</p>
+                <a href="https://en.wikipedia.org/wiki/Chandni_Chowk" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Raj Ghat</h3>
+                <p>A memorial dedicated to Mahatma Gandhi, located near the Yamuna River.</p>
+                <a href="https://en.wikipedia.org/wiki/Raj_Ghat_and_associated_memorials" target="_blank">Learn More</a>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"The Red Fort is an awe-inspiring piece of history. The architecture and the sheer size of the fort are impressive."</p>
+                <span>- A Tourist</span>
+            </div>
+            <div class="review">
+                <p>"Exploring the Red Fort was like stepping back in time. A must-visit for history buffs."</p>
+                <span>- A Traveler</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

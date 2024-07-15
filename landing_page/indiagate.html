@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Gate, Delhi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL-cSHOTsygAFWe3veWh7LxlOO_joVybihw&s') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Media Queries for Adjusting Layout */
+    @media (max-width: 767px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Hotel Styles */
+    .hotels {
+        margin-bottom: 40px;
+    }
+
+    .hotel-card {
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hotel-card img {
+        width: 150px;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .hotel-info {
+        padding: 10px;
+    }
+
+    .hotel-info h3 {
+        margin-top: 0;
+    }
+
+    .hotel-info p {
+        margin: 5px 0 10px;
+    }
+
+    .hotel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .hotel-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Attraction Styles */
+    .about-attraction,
+    .nearby-attractions,
+    .reviews {
+        margin-bottom: 40px;
+    }
+
+    /* Nearby Attractions Styles */
+    .nearby-attractions .attraction-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .nearby-attractions .attraction-card h3 {
+        margin-top: 0;
+    }
+
+    .nearby-attractions .attraction-card a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .nearby-attractions .attraction-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Reviews Styles */
+    .reviews .review {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 2s ease-in-out;
+    }
+
+    .reviews .review span {
+        display: block;
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>India Gate, Delhi</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About India Gate</h2>
+            <p>India Gate is a war memorial located in the heart of New Delhi, India. It stands 42 meters tall and is dedicated to the soldiers of the British Indian Army who died during the First World War and the Third Anglo-Afghan War. Designed by Sir Edwin Lutyens, India Gate is one of the most prominent landmarks in Delhi, attracting both locals and tourists.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRATcnAAATWgh7LeD7POZ-YoTnEpUFtKBeGig&s" alt="India Gate">
+                <img src="https://tourguideblog.com/wp-content/uploads/2024/01/Untitled-design-6.jpg.webp" alt="India Gate at Night">
+                <img src="https://www.holidify.com/images/cmsuploads/articles/649.jpg" alt="Amar Jawan Jyoti">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwf8Ofm5L-JrurpP7cUlj3stclgZ_Hv4FoA&s" alt="India Gate in Winter">
+            </div>
+        </section>
+
+        <section class="hotels">
+            <h2>Hotels Near India Gate</h2>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Me2QCxAgZpWF3xEN6BJpBmdxQ-NrBOsmVQ&s" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>The Imperial, New Delhi</h3>
+                    <p>A luxury hotel offering excellent amenities and located close to India Gate.</p>
+                    <a href="https://theimperialindia.com/" target="_blank">View More</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://qtxasset.com/quartz/qcloud1/media/image/luxurytraveladvisor/1528489286/Oberoi1.jpg/Oberoi1.jpg?VersionId=gCpbqC1vLFfBXr393kgoGe0cMwfQWnBS" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>The Oberoi, New Delhi</h3>
+                    <p>A prestigious hotel known for its top-notch service and beautiful surroundings.</p>
+                    <a href="https://www.oberoihotels.com/hotels-in-delhi/?utm_source=GMBlisting&utm_medium=organic" target="_blank">View More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>National War Memorial</h3>
+                <p>A monument dedicated to the Indian Armed Forces, located near India Gate.</p>
+                <a href="https://en.wikipedia.org/wiki/National_War_Memorial_(India)" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Rajpath</h3>
+                <p>The ceremonial boulevard of New Delhi, stretching from Rashtrapati Bhavan to India Gate.</p>
+                <a href="https://en.wikipedia.org/wiki/Rajpath" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>National Gallery of Modern Art</h3>
+                <p>An art gallery showcasing modern and contemporary Indian art.</p>
+                <a href="https://en.wikipedia.org/wiki/National_Gallery_of_Modern_Art" target="_blank">Learn More</a>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"India Gate is a must-visit landmark in Delhi. The structure is magnificent and the surroundings are beautiful."</p>
+                <span>- A Visitor</span>
+            </div>
+            <div class="review">
+                <p>"The experience of visiting India Gate at night is truly mesmerizing. The lighting adds a magical touch."</p>
+                <span>- A Tourist</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

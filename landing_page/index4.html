@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaniwar Wada, Pune</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Common Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://imgmedia.lbb.in/media/2019/05/5cd948ad611c3756b63684f5_1557743789391.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Gallery Styles */
+.gallery {
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images cover the set dimensions */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Adjusting Layout */
+@media (max-width: 767px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: auto; /* Allows for responsive resizing */
+    }
+}
+
+/* Attraction Styles */
+.about-attraction,
+.nearby-attractions,
+.reviews {
+    margin-bottom: 40px;
+}
+
+/* Nearby Attractions Styles */
+.nearby-attractions .attraction-card {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.nearby-attractions .attraction-card h3 {
+    margin-top: 0;
+}
+
+.nearby-attractions .attraction-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nearby-attractions .attraction-card a:hover {
+    text-decoration: underline;
+}
+
+/* Reviews Styles */
+.reviews .review {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.reviews .review span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Shaniwar Wada, Pune</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-attraction">
+            <h2>About Shaniwar Wada</h2>
+            <p>Shaniwar Wada is a historical fortification in the city of Pune, India. Built in 1732, it was the seat of the Peshwas of the Maratha Empire until 1818. The fort is a significant cultural landmark, offering a glimpse into the rich history of the Maratha rule.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGOE-jEZ2VAal53cQfjIYjQ91x9X7A78kPCw&s" alt="Shaniwar Wada">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtMo5DpW1u-_pps5d8t1wAfNmXFf2ToU8RMA&s" alt="Shaniwar Wada Gate">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVO_pFZA28zZiX41fWb_x7__hcpBKhzLIWg&s" alt="Shaniwar Wada Walls">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqQva9a3PR6N4w8fuTILIdvB6_BZKmqUTew&s" alt="Shaniwar Wada Top View">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+        <section class="nearby-attractions">
+            <h2>Nearby Attractions</h2>
+            <div class="attraction-card">
+                <h3>Dagadusheth Halwai Ganapati Temple</h3>
+                <p>A famous Hindu temple dedicated to the god Ganesha, known for its beautiful architecture and vibrant celebrations.</p>
+                <a href="https://en.wikipedia.org/wiki/Dagadusheth_Halwai_Ganapati_Temple" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Aga Khan Palace</h3>
+                <p>A historical palace built in 1892, which now serves as a memorial to Mahatma Gandhi.</p>
+                <a href="https://en.wikipedia.org/wiki/Aga_Khan_Palace" target="_blank">Learn More</a>
+            </div>
+            <div class="attraction-card">
+                <h3>Raja Dinkar Kelkar Museum</h3>
+                <p>A museum that houses a vast collection of artifacts from various parts of India.</p>
+                <a href="https://en.wikipedia.org/wiki/Raja_Dinkar_Kelkar_Museum" target="_blank">Learn More</a>
+            </div>
+            <!-- Add more attractions as needed -->
+        </section>
+
+        <section class="reviews">
+            <h2>Visitor Reviews</h2>
+            <div class="review">
+                <p>"Shaniwar Wada is a must-visit for history enthusiasts. The fort tells the story of Pune's rich heritage."</p>
+                <span>- A Satisfied Visitor</span>
+            </div>
+            <div class="review">
+                <p>"The architecture of Shaniwar Wada is stunning. It's a great place to explore and learn about Maratha history."</p>
+                <span>- History Buff</span>
+            </div>
+            <!-- Add more reviews as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Historical Landmarks. All rights reserved.</p>
+    </footer>
+</body>
+</html>
