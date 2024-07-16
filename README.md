@@ -7,3 +7,5 @@ Prasunet company internship task
    https://rutikakadu.github.io/prasunet/weather_app
 
 https://rutikakadu.github.io/prasunet/landing_page
+
+https://rutikakadu.github.io/prasunet/landing_page
