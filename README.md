@@ -8,4 +8,4 @@ Prasunet company internship task
 
 https://rutikakadu.github.io/prasunet/landing_page
 
-https://rutikakadu.github.io/prasunet/landing_page
+https://rutikakadu.github.io/prasunet/my_portfolio
